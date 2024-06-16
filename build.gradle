@@ -40,3 +40,8 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+application {
+    mainClassName = 'org.example.literalura2'
+}
+
