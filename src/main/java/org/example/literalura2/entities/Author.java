@@ -8,6 +8,7 @@ import org.example.literalura2.models.DataAuthor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Data
@@ -29,9 +30,17 @@ public class Author{
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Book> libros = new ArrayList<>();
 
+
     public Author(List<DataAuthor> author) {
         this.nombre = author.getFirst().nombre();
         this.nacimiento = author.getFirst().nacimiento();
         this.muerte = author.getFirst().muerte();
+    }
+
+    @Override
+    public String toString() {
+        return "Autor: " + nombre + "\n" +
+                "Fecha Nacimiento: " + nacimiento + "\n" +
+                "Fecha Muerte: " + muerte + "\n";
     }
 }

@@ -22,7 +22,7 @@ public class AuthorService {
     }
 
     public List<Author> findByYear(Integer year) {
-        return authorRepository.findByAlive(year);
+        return authorRepository.findByYear(year);
     }
 
     public Optional<Author> findByName(String nombre) {

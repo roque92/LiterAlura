@@ -26,18 +26,16 @@ public class BuscarLibro {
     private final ConverData converData;
     private final AuthorService authorService;
     private final BookService bookService;
-    private final OptionMenu optionMenu;
 
 
     private List<Book> libros;
 
     @Autowired
-    public BuscarLibro(ClientApi clientApi, ConverData converData, AuthorService authorService, BookService bookService, @Lazy OptionMenu optionMenu) {
+    public BuscarLibro(ClientApi clientApi, ConverData converData, AuthorService authorService, BookService bookService) {
         this.clientApi = clientApi;
         this.converData = converData;
         this.authorService = authorService;
         this.bookService = bookService;
-        this.optionMenu =  optionMenu;
 
     }
 
@@ -90,8 +88,6 @@ public class BuscarLibro {
 
         } else {
             System.out.println("\n*** Libro no encontrado. ***");
-            optionMenu.continueMenu();
         }
-        optionMenu.continueMenu();
     }
 }

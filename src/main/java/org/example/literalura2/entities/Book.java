@@ -39,4 +39,21 @@ public class Book {
     public Author getAuthor() {
         return autor;
     }
+
+    @Override
+    public String toString() {
+        return "Libro" + "\n" +
+                "Titulo: " + getTitulo() + "\n" +
+                "Autor: " + obtenerNombreAutor() + "\n" +
+                "Idioma: " + getIdioma() + "\n" +
+                "Descargas: " + getDescargas() + "\n";
+    }
+
+    public String obtenerNombreAutor() {
+        if (autor != null) {
+            return autor.getNombre().split(",")[0].trim();
+        } else {
+            return "Desconocido";
+        }
+    }
 }
