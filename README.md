@@ -19,4 +19,4 @@ Este proyecto es parte de uno de los Challenges que a Propuest Alura Latam en su
 
 **Configuracion**
 - Clona el projecto por medio de SSH o https
-- Crea las tablas necesarias con las columnas correspondientes ``` CREATE TABLE test (id INT, muerte INT, nacimiento INT, nombre VARCHAR(255));```
+- Crea las tablas necesarias con las columnas correspondientes ```CREATE TABLE test (id INT, muerte INT, nacimiento INT, nombre VARCHAR(255));```
